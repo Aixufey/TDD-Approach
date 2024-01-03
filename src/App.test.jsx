@@ -16,3 +16,15 @@ test("app contains correct heading", () => {
     expect(headingEleCaseSensitive).toBeInTheDocument();
 
 });
+
+
+test("button text is correct", () => {
+    render(<App />);
+
+    // General DOM assertion
+    const clickMe = screen.getByText(/click me/i);
+    expect(clickMe.textContent).toBe("Click me!");
+
+    // DOM specific assertion
+    expect(clickMe).toBeInTheDocument();
+})
