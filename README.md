@@ -5,6 +5,12 @@
 - RTL provides ways to manipulate and examine simulated DOM
 - Jest/Vitest are test runners, only difference is config setup. And few advanced syntax differences.
 
+## Run test in watch mode
+
+```sh
+npm test --watch
+```
+
 ## How this project was created
 
 This project was created using this command:
