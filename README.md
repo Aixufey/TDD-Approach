@@ -5,6 +5,38 @@
 - RTL provides ways to manipulate and examine simulated DOM
 - Jest/Vitest are test runners, only difference is config setup. And few advanced syntax differences.
 
+## TDD Approach
+
+1. Write test before writing code
+    - then write code according to "spec" set by tests
+2. _Red-Green_ testing
+    - Write function shell, then write a test and fail, then write minimal code to make this pass.
+3. Refactor and clean up the code
+    - Apply coding practices and principles.
+
+```mermaid
+  flowchart LR
+  A[Write 'shell']
+  B[Write test]
+  C[Test fail]
+  D[Write code]
+  E[Test pass]
+  classDef foo stroke:#f00
+  classDef boo stroke:#0f0
+  A --concept---> B --> C:::foo --> D --implement functionality---> E:::boo
+```
+
+## Types of tests
+
+- Unit test - tests one unit of code in isolation
+- Integration test - multiple unit works together
+- Functional test - test the behavior of multiple units workflow
+
+## Testing Library and Accessibility
+
+- screen finds the elements by [Accessibility and their role](https://www.w3.org/TR/wai-aria/#role_definitions)
+- The recommended queries to test with can be found [here](https://testing-library.com/docs/queries/about#priority).
+
 ## Run test in watch mode
 
 ```sh

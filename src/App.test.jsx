@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { expect } from "chai";
 import App from "./App";
+import exp from "constants";
 
 test("app contains correct heading", () => {
 
@@ -27,4 +28,10 @@ test("button text is correct", () => {
 
     // DOM specific assertion
     expect(clickMe).toBeInTheDocument();
+})
+
+test("link exist", () => {
+    render(<App />);
+    const link = screen.getByRole("link", { name: /code/i });
+    expect(link).toBeInTheDocument();
 })
