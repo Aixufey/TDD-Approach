@@ -1,8 +1,6 @@
-import { useState } from "react";
-import CustomButton from "./components/button";
-import CheckBox from "./components/checkbox";
+import OrderSummary from "./pages/summary/OrderSummary";
+
 function App() {
-  const [isDisable, setIsDisable] = useState(false);
   return (
     <div
       style={{
@@ -14,15 +12,8 @@ function App() {
         height: '100%',
       }}
     >
-      <h1>Learn React</h1>
-      <CustomButton
-        value="Change to"
-        isDisable={isDisable}
-      />
-      <br />
-      <CheckBox
-        handleOnCheck={() => setIsDisable(prev => !prev)}
-      />
+      {/* <TestApp /> */}
+      <OrderSummary />
     </div>
   );
 }
