@@ -1,9 +1,9 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import App from '../../App';
+import TestApp from '../../TestApp';
 import { expect } from 'vitest';
 test('checkbox workflow', () => {
     // Checkbox is in the shadow tree of App
-    render(<App />);
+    render(<TestApp />);
 
     const button = screen.getByRole("button", { name: /change to/i });
     // Name for checkbox is the label HTML element or aria-label attribute
@@ -35,7 +35,7 @@ test('checkbox workflow', () => {
 });
 
 test("checkbox workflow after button click", () => {
-    render(<App />);
+    render(<TestApp />);
 
     const button = screen.getByRole("button", { name: /change to/i });
     const checkBox = screen.getByRole("checkbox", { name: /disable button/i });

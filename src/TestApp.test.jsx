@@ -1,13 +1,13 @@
 import { render, screen } from "@testing-library/react";
 import { expect } from "chai";
-import App from "./App";
+import TestApp from "./TestApp";
 import { describe } from "vitest";
 import kebabCaseToTitleCase from "./helpers";
 
 test("app contains correct heading", () => {
 
     // Create simulated DOM via render
-    render(<App />);
+    render(<TestApp />);
 
     // Access via screen
     const headingEle = screen.getByText(/lEaRn ReAcT/i);

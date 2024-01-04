@@ -1,5 +1,21 @@
 # TDD-Approach
 
+## Sundae - Client
+>
+> Backdrop to test
+
+- complex user interactions, form entry, order phases.
+- mouseover popup, element disappears from DOM
+- simulate server response, mock server response
+- async app updates, awaiting DOM changes
+- global state via context
+
+- [ ] inProgress phase
+- [ ] review phase
+- [ ] completed
+
+---
+
 ## React Testing Library vs Jest (Vitest)
 
 - RTL provides ways to manipulate and examine simulated DOM
