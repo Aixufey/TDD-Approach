@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { expect } from "chai";
-import CustomButton from "../components";
+import CustomButton from "./index";
 import { logRoles } from "@testing-library/react";
 
 // Test a button behavior workflow
