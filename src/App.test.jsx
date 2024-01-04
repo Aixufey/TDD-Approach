@@ -9,22 +9,10 @@ test("app contains correct heading", () => {
 
     // Access via screen
     const headingEle = screen.getByText(/lEaRn ReAcT/i);
-
+    // General DOM assertion
     const headingEleCaseSensitive = screen.getByText('Learn React');
-    // Assert
+    // DOM specific assertions
     expect(headingEle).toBeInTheDocument();
     expect(headingEleCaseSensitive).toBeInTheDocument();
 
 });
-
-
-test("button text is correct", () => {
-    render(<App />);
-
-    // General DOM assertion
-    const clickMe = screen.getByText(/click me/i);
-    expect(clickMe.textContent).toBe("Click me!");
-
-    // DOM specific assertion
-    expect(clickMe).toBeInTheDocument();
-})

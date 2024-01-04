@@ -1,19 +1,23 @@
-const CustomButton = ({value}) => {
+import PropTypes from 'prop-types';
+import { useState } from 'react';
+import "./index.css";
+const CustomButton = ({ value, color, className }) => {
+    const [buttonColor, setButtonColor] = useState("red");
+    const nextColor = buttonColor === "red" ? "green" : "red";
+
     return (
-        <div style={{
-            width: "100px",
-            height: "100px",
-            border: "1px solid black",
-        }}>
-            <button
-                style={{
-                    width: "100%",
-                    height: "100%",                    
-                }}
-            >
-                {value}
-            </button>
-        </div>
+        <button
+            className={buttonColor}
+            onClick={() => setButtonColor(nextColor)}
+        >
+            {value}{nextColor}
+        </button>
     )
 };
+
+CustomButton.propTypes = {
+    value: PropTypes.string.isRequired,
+    color: PropTypes.string,
+    className: PropTypes.string,
+}
 export default CustomButton;
