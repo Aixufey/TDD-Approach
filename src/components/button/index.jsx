@@ -1,17 +1,21 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import "./index.css";
+import kebabCaseToTitleCase from '../../helpers';
+
 const CustomButton = ({ value, color, className, isDisable }) => {
-    const [buttonColor, setButtonColor] = useState("red");
-    const nextColor = buttonColor === "red" ? "green" : "red";
+    const [buttonColor, setButtonColor] = useState("medium-violet-red");
+    const nextColorClassName = buttonColor === "medium-violet-red" ? "midnight-blue" : "medium-violet-red";
+    const nextColorTitleCase = kebabCaseToTitleCase(nextColorClassName);
     const disabledColor = isDisable ? "gray" : buttonColor;
+
     return (
         <button
             className={disabledColor}
-            onClick={() => setButtonColor(nextColor)}
+            onClick={() => setButtonColor(nextColorClassName)}
             disabled={isDisable}
         >
-            {value}{nextColor}
+            {value} {nextColorTitleCase}
         </button>
     )
 };

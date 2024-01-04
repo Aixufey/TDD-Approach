@@ -31,7 +31,7 @@ test('checkbox workflow', () => {
     expect(checkBox).not.toBeChecked();
 
     // button turns red when enabled
-    expect(button).toHaveClass("red");
+    expect(button).toHaveClass("medium-violet-red");
 });
 
 test("checkbox workflow after button click", () => {
@@ -40,9 +40,9 @@ test("checkbox workflow after button click", () => {
     const button = screen.getByRole("button", { name: /change to/i });
     const checkBox = screen.getByRole("checkbox", { name: /disable button/i });
 
-    // Button click change color to green
+    // Button click change color to midnight-blue
     fireEvent.click(button);
-    expect(button).toHaveClass("green");
+    expect(button).toHaveClass("midnight-blue");
 
     // click checkbox to disable button and check checkbox
     fireEvent.click(checkBox);
@@ -54,5 +54,5 @@ test("checkbox workflow after button click", () => {
     fireEvent.click(checkBox);
     expect(button).toBeEnabled();
     expect(checkBox).not.toBeChecked();
-    expect(button).toHaveClass("green");
+    expect(button).toHaveClass("midnight-blue");
 })
