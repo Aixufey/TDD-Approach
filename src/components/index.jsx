@@ -1,4 +1,7 @@
-const CustomButton = ({value}) => {
+import PropTypes from 'prop-types';
+import "./index.css";
+const CustomButton = ({ value, color, className }) => {
+
     return (
         <div style={{
             width: "100px",
@@ -6,9 +9,11 @@ const CustomButton = ({value}) => {
             border: "1px solid black",
         }}>
             <button
+                className={className}
                 style={{
                     width: "100%",
-                    height: "100%",                    
+                    height: "100%",
+                    backgroundColor: color,
                 }}
             >
                 {value}
@@ -16,4 +21,10 @@ const CustomButton = ({value}) => {
         </div>
     )
 };
+
+CustomButton.propTypes = {
+    value: PropTypes.string.isRequired,
+    color: PropTypes.string,
+    className: PropTypes.string,
+}
 export default CustomButton;
