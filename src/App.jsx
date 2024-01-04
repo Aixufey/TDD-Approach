@@ -16,7 +16,7 @@ function App() {
     >
       <h1>Learn React</h1>
       <CustomButton
-        value="Change to "
+        value="Change to"
         isDisable={isDisable}
       />
       <br />

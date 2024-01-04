@@ -16,10 +16,10 @@ test("button flow", () => {
     logRoles(container);
 
     // check initial color
-    expect(buttonEle).toHaveClass("red");
+    expect(buttonEle).toHaveClass("medium-violet-red");
 
     // check the button's label before click
-    expect(buttonEle).toHaveTextContent(/green/i);
+    expect(buttonEle).toHaveTextContent(/blue/i);
     
     // click the button
     fireEvent.click(buttonEle);
@@ -28,5 +28,5 @@ test("button flow", () => {
     expect(buttonEle).toHaveTextContent(/red/i);
     
     // check the button's color
-    expect(buttonEle).toHaveClass("green");
+    expect(buttonEle).toHaveClass("midnight-blue");
 });
